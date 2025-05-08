@@ -14,7 +14,7 @@ let a = tab.(i)
 ```
 Cette accès présente une complexité en $\mathscr O(1)$, donc quasiment instantané.
 Ceci est dû à la structure interne des tableaux, en effet (en notant `&` "adresse de") :
-$$\&t.(i) = \&t.(o) + (i \times \&(int))$$
+`&t.(i) = &t.(o) + (i * &(int))` (i.e. l'adresse du i-ème élément est à l'adresse du début + i fois la taille d'un int)
 De même, un appel :
 ```ocaml
 Array.lenght t;;
@@ -41,7 +41,7 @@ m.(1) <- [|10; 20; 30|];
 (* Autre méthode *)
 let m = Array.make_matrix 2 3 0;;
 ```
-On a ici d'abord codé la matrice suivante : $\left(\begin{array}{ccc} 1 & 2 & 3 \\ 10 & 20 & 30\end{array}\right)$, puis une matrice $2\times3$ de $0$. 
+On a ici d'abord codé la matrice suivante : $` \left(\begin{array}{ccc} 1 & 2 & 3 \\ 10 & 20 & 30\end{array}\right) `$, puis une matrice $` 2\times 3 `$ de $` 0 `$. 
 
 ### Parcours avec des boucles
 On peut afficher tous les éléments d'un tableau à l'aide d'une boucle.
