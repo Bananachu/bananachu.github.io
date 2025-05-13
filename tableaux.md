@@ -2,16 +2,14 @@
 
 ## Fonctionnement interne
 Contrairement aux listes où chaque élément est un couple (valeur, pointeur), ici tous les éléments sont contigus dans la mémoire. Notons que chaque élément est de taille 64bits. De fait, tous les éléments du tableau sont de même type et sa taille est fixée, il est toutefois possible de changer le contenu de telle ou telle case, tant qu'il reste du même type.
-```
+
 Représentation imagée d'un tableau OCaml (on voit que les éléments sont contigus)
 Adresse : notons x la taille d'un élément et &t l'adresse du tableau
-   &t + x   &t + 2x   &t + 3x   &t + 4x     ...
-+---------+---------+---------+---------+---------...
-|         |         |         |         |         
-| tab.(0) | tab.(1) | tab.(2) | tab.(3) |   ...   
-|         |         |         |         |         
-+---------+---------+---------+---------+---------...
-```
+|  `&t + x` | `&t + 2x` | `&t + 3x` | `&t + 4x` |   ...   |
+|:----------|-----------|-----------|-----------|---------|
+| `tab.(0)` | `tab.(1)` | `tab.(2)` | `tab.(3)` |   ...   |
+
+
 
 ## Syntaxe
 ```ocaml
