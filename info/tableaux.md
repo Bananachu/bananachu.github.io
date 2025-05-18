@@ -24,7 +24,7 @@ Contrairement aux listes, les tableaux sont indexés, il est possible d'accéder
 ```ocaml 
 let a = tab.(i)
 ```
-Cet accès présente une complexité en $\mathscr O(1)$, donc quasiment instantané.
+Cet accès présente une complexité en \$\mathscr O(1)\$, donc quasiment instantané.
 Ceci est dû à la structure interne des tableaux, en effet (en notant `&` "adresse de") :
 `&t.(i) = &t.(o) + (i * &(int))` (i.e. l'adresse du i-ème élément est à l'adresse du début + i fois la taille d'un int, cf schéma plus haut.)
 
