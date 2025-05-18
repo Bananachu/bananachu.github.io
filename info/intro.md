@@ -1,9 +1,9 @@
 # Présentation du OCaml en MPSI
 
-## Variables et types de données
+## Variables et types de base
 
 ### Persistance des variables et typage fort
-> En OCaml les variables sont persistantes, c'est-à-dire qu'une variable définie ne change pas de valeur tout au long du programme. Il est toutefois possible de nommer une nouvelle variable de la même manière qu'une ancienne, laissant cette dernière au ramasse-miettes :
+En OCaml les variables sont persistantes, c'est-à-dire qu'une variable définie ne change pas de valeur tout au long du programme. Il est toutefois possible de nommer une nouvelle variable de la même manière qu'une ancienne, laissant cette dernière au ramasse-miettes :
 ```ocaml
 let x = 8;; (* On définit une variable *)
 let x = 42;; (* On écrase le "vieux" x *)
@@ -39,6 +39,8 @@ Caractère ASCII vérifiant les propriétés usuelles du C.
 ```ocaml
 let c = 'a';;
 ```
+#### Le type unit `()`
+Ce type ne représente pas d'objet à proprement parler, c'est un type vide. C'est par exemple ce qui est renvoyé par la fonction `print_int`. Ce type peut avoir son importance dans des expressions conditionnelles par exemple.
 #### Les chaînes de caractères `string`
 Les chaînes de caractères sont de longueur arbitrairement grande et indexées.
 ```ocaml
@@ -46,7 +48,7 @@ let mot = "bonjour";; (* string *)
 let o = mot.[1];; (* char 'o' *)
 ```
 #### Les listes `list`
-> <big><big><big>☡</big></big></big>
+> [!WARNING]
 > - Tous les éléments de la liste doivent être du même type 
 > - Les listes ne sont pas indexées
 > - Le type de la liste dépend de son contenu
@@ -58,13 +60,14 @@ let l = ['a'; 'b'; 'c';];; (* char list *)
 let l = [];; (* cas particulier : de type "a list" (ou nil) *)
 ```
 #### Expressions conditionnelles
-> <big><big><big>☡</big></big></big>
-> - Toutes les branches renvoient le même type 
-> - Le `else` est donc nécessaire sauf si le `if` est de type `unit` (type *de facto* en cas d'absence)
+En OCaml, même les expressions `if ... else` ont un type.
+> [!WARNING]
+> - Toutes les branches doivent renvoyer le même type 
+> - Le `else` est nécessaire sauf si le `if` est de type `unit` (la branche `else` est *de facto* `unit` en cas d'absence)
 > - Le type de l'expression est celui de ce que renvoient ses branches
 ```ocaml
 let a = if 2 > 1 then 2 else 3;; (* est correcte *)
-(* a est alors un entier *)
+> val a : int = 2 (* a est alors un entier *)
 
 let a = if 2 > 1 then 5 else 3.14;; (* n'est pas possible *)
 ```
@@ -90,14 +93,14 @@ let a = 1. +. 2.
 let a = true && false
 let a = true || false (* "or" possible mais déprécié *)
 let a = not false
-(* not est une fonction *)
+(* NOTE: not est une fonction *)
 
 (* Opérateurs sur les chaînes de caractères *)
 let a = "hello " ^ "world!"
 
 (* Opérateur constructeur de liste *)
 let l = 1 :: 2 :: 3 :: [];;
-(* Prend une une liste à droite et un élément à mettre dans la liste à gauche. L'élément doit être du bon type (ex "int" pour une "int list") et sera placé en première position. N'importe quoi peut être ajouté dans une 'a list (mais elle devient alors du type du n'importe quoi.*)
+(* Prend une une liste à droite et un élément à mettre dans la liste à gauche. L'élément doit être du bon type (ex "int" pour une "int list") et sera placé en première position. N'importe quoi peut être ajouté dans une 'a list (mais elle devient alors du type du n'importe quoi en question ; par exemple ici l est une int list.*)
 
 (* Concaténateur de liste *)
 let l1 = [1; 2; 3];;
@@ -106,7 +109,12 @@ let l = l1 @ l2;;
 (* Concatène des listes de même type*)
 
 (* Opérateurs de comparaison *)
-
+(* "Différent de" *)
+let f = 42 <> 69;;
+(* "Égal à" *)
+let g = (42 = 69);;
+let h = 42 < 69;;
+let i = 
 ```
 
 
