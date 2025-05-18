@@ -6,7 +6,7 @@ Contrairement aux listes où chaque élément est un couple (valeur, pointeur), 
 Représentation imagée d'un tableau OCaml (on voit que les éléments sont contigus)
 Adresse : notons x la taille d'un élément et &t l'adresse du tableau
 |  `&t + x` | `&t + 2x` | `&t + 3x` | `&t + 4x` |   ...   |
-|:----------|-----------|-----------|-----------|---------|
+|:----------|-----------|-----------|-----------|--------:|
 | `tab.(0)` | `tab.(1)` | `tab.(2)` | `tab.(3)` |   ...   |
 
 
@@ -24,7 +24,7 @@ Contrairement aux listes, les tableaux sont indexés, il est possible d'accéder
 ```ocaml 
 let a = tab.(i)
 ```
-Cet accès présente une complexité en \$\mathscr O(1)\$, donc quasiment instantané.
+Cet accès présente une complexité en \\(\mathscr O(1)\\), donc quasiment instantané.
 Ceci est dû à la structure interne des tableaux, en effet (en notant `&` "adresse de") :
 `&t.(i) = &t.(o) + (i * &(int))` (i.e. l'adresse du i-ème élément est à l'adresse du début + i fois la taille d'un int, cf schéma plus haut.)
 
