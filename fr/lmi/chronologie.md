@@ -1,4 +1,4 @@
-* L'idée de ces notes est de retracer l'histoire dans le sens chronologique, <u>en faisant fi de l'ordre de la narration</u>. Ce n'est donc **pas** un résumé de l'œuvre au sens traditionnel puisque la narration ne respecte pas exactement la chronologie des événements (même si globalement, on suit le déroulé du roman).
+* L'idée de ces notes est de retracer l'histoire dans le sens chronologique, <u>en faisant fi de l'ordre de la narration</u>. Ce n'est donc **pas** un résumé de l'œuvre au sens traditionnel puisque la narration ne respecte pas exactement la chronologie des événements (même si globalement, on suit le déroulé du roman). La plupart des informations ici seraient d'ailleurs superflues pour un résumé, il s'agit d'être complet *au cas où* (les MPSI1 de Thiers savent comment leur prof de français peut demander de manière impromptue dès le premier cours des renseignements aussi précis que ce qui est dit ici)
 * Le symbole **§** qui suit les numéros de pages signifie "paragraphe". Par exemple, "p.16 §1" signifie que la journée commence au premier paragraphe dont l'alinéa est visible sur la seizième page. **§0** désigne éventuellement le morceau de paragraphe commencé précédemment qui se poursuit sur la page courante.
 * Par convention, nous faisons débuter l'histoire en l'an 19X0 et par la suite les années iront de 1 en 1 : 19X1, 19X2... Ainsi, bien que l'histoire commence en 19X0, on apprend plus tard que la narratrice écrit en 19X2, autour du 5 novembre d'après les premières lignes du roman (p.13 §1). Notons qu'étant donné les technologies présentes (radio dans la voiture, arme nucléaire, lampe à pétrole) et absentes (ordinateurs) on peut situer l'histoire entre les années 60 et 80.
 ---
@@ -14,7 +14,7 @@ Travail manuel, la narratrice commence à se forger une routine.
 ## 4 mai *(p.43 §3)*
 Visite de « la cabane sur le pré à côté du ruisseau ». La narratrice va chercher du foin pour la vache.
 ## 5 mai *(p.44 §2)*
-Continue de chercher du foin pour la vache qui acquiert le nom de Bella (on ne connait pas la date exacte du nommage).
+Continue de chercher du foin pour la vache qui acquiert le nom de Bella (on ne connait pas la date exacte du nommage, entre le 5 et le 10 mai).
 ## 10 mai *(p.45 §3)*
 "Un véritable jour d'hiver". La narratrice commence à réaliser que la situation risque de s'éterniser. Elle s'organise pour survivre au long terme. Pense à ses enfants (p.47 §1).
 ## 16 mai *(p.53 §3)*
