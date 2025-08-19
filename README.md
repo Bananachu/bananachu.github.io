@@ -4,6 +4,7 @@
 Écoutez j'ai pris toutes ces notes j'espère bien qu'elles me seront utiles (ce n'est pas fini).
 ### Marlen Haushofer : Le Mur invisible
 * [Chronologie](fr/lmi/chronologie.md)
+
 ### Jules Verne : Vingt mille lieues sous les mers
 ### George Canguilhem : La connaissance de la vie
 
