@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tableaux en OCaml
+---
+
 # Tableaux en OCaml
 
 ## Fonctionnement interne
