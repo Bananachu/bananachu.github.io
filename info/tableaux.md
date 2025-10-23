@@ -10,9 +10,11 @@ Contrairement aux listes où chaque élément est un couple (valeur, pointeur), 
 
 Représentation imagée d'un tableau OCaml (on voit que les éléments sont contigus)
 Adresse : notons x la taille d'un élément et &t l'adresse du tableau
-| &t + x | &t + 2x | &t + 3x | &t + 4x | … |
-|:-------|:--------|:--------|:--------|---:|
-| `tab.(0)` | `tab.(1)` | `tab.(2)` | `tab.(3)` | … |
+
+| add(t) + x | add(t) + 2x |     …     | add(t) + ix |     …     |
+|:-----------|:------------|:----------|:------------|:----------|
+| `tab.(0)`  |  `tab.(1)`  |     …     |  `tab.(i)`  |     …     |
+
 
 
 
