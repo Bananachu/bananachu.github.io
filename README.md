@@ -1,3 +1,8 @@
+---
+layout: default
+title: Ma page
+---
+
 # Resources pour puants de prépa
 
 ## Français 25/26 ~ Expériences de la nature
@@ -14,3 +19,8 @@ Cours de OCaml niveau option informatique MPSI/MP. Il s'agit de mes propres note
 * [Créer des types en OCaml.](info/types.md)
 * [Les tableaux en OCaml.](info/tableaux.md)
 * [Les références en OCaml.](info/references.md)
+
+
+test de rendu latex $ax + b$ ou bien \(e^{i\pi} + 1 = 0\)
+$$\vec F = m\vec a$$
+\[\ln(1 + 2 + 3) = \ln 1 + \ln 2 + \ln 3\]
