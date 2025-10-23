@@ -1,3 +1,4 @@
 markdown: kramdown
 kramdown:
-    math_engine: katex
+  input: GFM
+  math_engine: mathjax
