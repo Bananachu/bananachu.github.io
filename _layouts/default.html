@@ -61,12 +61,7 @@
       margin: 1em 0;
       font-size: 1.1em;
     }
-    .highlight .code {
-      background: None;
-      border-radius: None;
-      color: inherit;
-    }
-    .code {
+    #language-plaintext {
       background: #1d1d1d;
       color: #ffffff;
       border-radius: 6px;
@@ -86,6 +81,11 @@
   </style>
 </head>
 <body>
+  <header> test de texte en haut de page pour tout le monde </header>
+  <nav>
+  {{ content | toc }}
+  </nav>
   {{ content }}
+  <footer> test de texte en bas de page pour tout le monde </footer>
 </body>
 </html>
