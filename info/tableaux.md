@@ -64,7 +64,8 @@ m1.(1) <- [|10; 20; 30|];
 
 let m2 = Array.make_matrix 2 3 0;;
 ```
-On a ici défini deux matrices : $M_1 = \begin{pmatrix}1 & 2 & 3 \\\ 10 & 20 & 30\end{pmatrix}$ et $M_2 = \begin{pmatrix} 0 & 0 & 0 \\\ 0 & 0 & 0\end{pmatrix}$. 
+On a ici défini deux matrices : 
+$$M_1 = \begin{pmatrix}1 & 2 & 3 \\ 10 & 20 & 30\end{pmatrix}$ \text {et} M_2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$$. 
 
 
 ## Parcours avec des boucles
