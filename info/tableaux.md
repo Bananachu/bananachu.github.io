@@ -1,5 +1,15 @@
 # Tableaux en OCaml
 
+- [Tableaux en OCaml](#tableaux-en-ocaml)
+  * [Fonctionnement interne](#fonctionnement-interne)
+  * [Premières manipulations](#premi-res-manipulations)
+    + [Création](#cr-ation)
+    + [Indexation](#indexation)
+    + [Réaffectation](#r-affectation)
+    + [Le module `Array`](#le-module--array-)
+  * [Matrices](#matrices)
+  * [Parcours avec des boucles](#parcours-avec-des-boucles)
+
 ## Fonctionnement interne
 Contrairement aux listes où chaque élément est un couple (valeur, pointeur), ici tous les éléments sont contigus dans la mémoire. Donc là où pour une liste l'ordinateur doit parcourir les i-1 éléments avant d'arriver au i-ème, il suffit ici de regarder à l'adresse mémoire $\mathrm{add}(\texttt{tab}) + i \times \texttt{taille}$, avec $\mathrm{add}(\texttt{tab})$ l'adresse mémoire du tableau et $\texttt{taille}$ la taille d'un élément du tableau. Représentons ici schématiquement un bout de mémoire vive :
 
