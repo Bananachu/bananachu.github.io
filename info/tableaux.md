@@ -66,12 +66,12 @@ m1.(1) <- [|10; 20; 30|];
 let m2 = Array.make_matrix 2 3 0;;
 ```
 On a ici défini deux matrices :
-<span><div style="display:flex; align-items:center; gap:1em;">
+<div style="display:flex; align-items:center; gap:1em;">
   <div>$$M_1 = \begin{pmatrix}1 & 2 & 3 \\ 10 & 20 & 30\end{pmatrix}</div>
   <div> et </div>
   <div>$$M_2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$$</div>
   <div>.</div>
-</div></span>
+</div>
 
 ## Parcours avec des boucles
 On peut afficher tous les éléments d'un tableau à l'aide d'une boucle `for`.
