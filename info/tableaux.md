@@ -67,7 +67,7 @@ let m2 = Array.make_matrix 2 3 0;;
 ```
 On a ici défini deux matrices :
 <div style="display:flex; align-items:center; gap:1em;">
-  <div>$$M_1 = \begin{pmatrix}1 & 2 & 3 \\ 10 & 20 & 30\end{pmatrix}</div>
+  <div>$$M_1 = \begin{pmatrix}1 & 2 & 3 \\ 10 & 20 & 30\end{pmatrix}$$</div>
   <div> et </div>
   <div>$$M_2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$$</div>
   <div>.</div>
