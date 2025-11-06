@@ -9,9 +9,10 @@ Contrairement aux listes où chaque élément est un couple (valeur, pointeur), 
 
 > N'oublions pas que le i-ème élément se situe à l'indice `i-1` !
 
-On voit que ceci permet d'accéder au i-ème élément du tableau en $\mathscr O(1)$, contrairement à une liste où l'action se fait en $\mathscr O(i)$.
-Nous verrons plus bas que ce fonctionnement nous permet aussi de changer la valeur d'un élément du tableau à la volée, puisqu'il sagit juste de réécrire à un endroit connu dans la mémoire.
-Toutefois, il est nécessaire que tous les éléments d'un tableau soient de même taille et de même type. La taille d'un tableau est de plus fixée à la création, puisqu'on réserve un gros bout de mémoire pour le stocker. Il est virtuellement possible d'ajouter un élément au bout d'un tableau mais cela se traduit en fait par la création d'un tableau plus grand de 1 élément dans lequel on copie toutes les autres valeurs, donc une complexité linéaire, contrairement aux listes ou cela est en temps constant.
+On voit que ceci permet d'accéder au i-ème élément du tableau en $\mathscr O(1)$, contrairement à une liste où l'action se fait en $\mathscr O(i)$.<br>
+Nous verrons plus bas que ce fonctionnement nous permet aussi de changer la valeur d'un élément du tableau à la volée, puisqu'il sagit juste de réécrire à un endroit connu dans la mémoire.<br>
+Toutefois, il est nécessaire que tous les éléments d'un tableau soient de même taille et de même type. La taille d'un tableau est de plus fixée à la création, puisqu'on réserve un gros bout de mémoire pour le stocker.<br>
+Il est virtuellement possible d'ajouter un élément au bout d'un tableau mais cela se traduit en fait par la création d'un tableau plus grand de 1 élément dans lequel on copie toutes les autres valeurs, donc une complexité linéaire, contrairement aux listes ou cela est en temps constant.
 
 
 ## Premières manipulations
@@ -64,9 +65,9 @@ m1.(1) <- [|10; 20; 30|];
 
 let m2 = Array.make_matrix 2 3 0;;
 ```
-On a ici défini deux matrices : 
-$$M_1 = \begin{pmatrix}1 & 2 & 3 \\ 10 & 20 & 30\end{pmatrix}$ \text {et} M_2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$$. 
-
+On a ici défini deux matrices :
+<span><div style="display:flex; align-items:center; gap:1em;">
+  <div>$$M_1 = \begin{pmatrix}1 & 2 & 3 \\ 10 & 20 & 30\end{pmatrix}</div> <div> et </div> <div>$$M_2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$$</div><div>.</div></span>
 
 ## Parcours avec des boucles
 On peut afficher tous les éléments d'un tableau à l'aide d'une boucle `for`.
