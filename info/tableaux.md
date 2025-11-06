@@ -41,9 +41,14 @@ t.(i) <- 42;;
 ### Le module `Array`
 Comme pour les listes, OCaml fournit par défaut une bibliothèque contentant certaines fonctions de base pour manipuler les tableaux. Ces fonctions sont a priori rappelées dans les sujets de concours et non-utilisables a priori mais il est bon d'en connaître quelques-unes :
 ```ocaml
-Array.length t;; (* Renvoie la taille du tableau t*)
-let l = [1; 2; 3] in Array.of_list l;; (* Crée un tableau avec les éléments de la liste l *)
-let tab = [|1; 2; 3|] in Array.to_list tab;; (* Crée une liste avec les éléments de tab *)
+Array.length t;;
+(* Renvoie la taille du tableau t*)
+
+let l = [1; 2; 3] in Array.of_list l;;
+(* Crée un tableau avec les éléments de la liste l *)
+
+let tab = [|1; 2; 3|] in Array.to_list tab;;
+(* Crée une liste avec les éléments de tab *)
 ```
 Remarquons que la structure interne des tableaux permet que `Array.length` soit en $\mathscr O(1)$, contrairement à `List.length` qui est linéaire. La taille du tableau est en effet fixé à la création et n'a pas besoin d'être calculée.
 `Array.of_list` et `Array.to_list` sont quant à eux linéaires de manière assez évidente.
@@ -54,11 +59,12 @@ En OCaml, les matrices sont des tableaux de tableaux et peuvent être définies 
 ```ocaml
 let m1 = Array.make 2 [||];;
 m1.(0) <- [|1; 2; 3|];
-m1.(1) <- [|10; 20; 30|];  (* cf. cours d'introduction pour cette syntaxe impérative *)
+m1.(1) <- [|10; 20; 30|];
+(* cf. cours d'introduction pour cette syntaxe impérative *)
 
 let m2 = Array.make_matrix 2 3 0;;
 ```
-On a ici défini deux matrices : $M_1 = \begin{bmatrix}1 & 2 & 3\\10 & 20 & 30\end{bmatrix}$ et $M_2 = \begin{bmatrix} 0 & 0 & 0\\0 & 0 & 0\end{bmatrix}$. 
+On a ici défini deux matrices : $M_1 = \begin{bmatrix}1 & 2 & 3 \\ 10 & 20 & 30\end{bmatrix}$ et $M_2 = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\end{bmatrix}$. 
 
 
 ## Parcours avec des boucles
@@ -66,15 +72,15 @@ On peut afficher tous les éléments d'un tableau à l'aide d'une boucle `for`.
 Du début à la fin...
 ```ocaml
 let t = [|10; 20; 30|] in 
-	for i = 0 to (Array.length t - 1) do
-		Print.printf "t[%d]=%d\n" i t.(i);
-	done;; 
+  for i = 0 to (Array.length t - 1) do
+    Print.printf "t[%d]=%d\n" i t.(i);
+  done;; 
 ```
 ...ou de la fin au début.
 ```ocaml
 let t = [|10; 20; 30|] in 
-	for i = (Array.length t - 1) downto 0 do
-		Print.printf "t[%d]=%d\n" i t.(i);
-	done;; 
+  for i = (Array.length t - 1) downto 0 do
+    Print.printf "t[%d]=%d\n" i t.(i);
+  done;; 
 ```
 Cette syntaxe impérative n'est pas réservée aux tableaux mais leur nature indexée en fait de très bons usagers.
