@@ -1,0 +1,66 @@
+body {
+	font-family: system-ui, sans-serif;
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+	line-height: 1.4;
+	background-color:#121212;
+	color: #a0a0a0;
+}
+
+h1, h2, h3 {
+	color:#e1e1e1;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 1em 0;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid #ccc;
+	padding: 0.4em 0.6em;
+	text-align: left;
+}
+
+th {
+	background-color: #070707;
+	color:#e1e1e1
+}
+
+a {
+	 color:#c24d1e;
+}
+
+pre {
+	background: #f4f4f4;
+	padding: 0.8em;
+	border-radius: 6px;
+}
+
+.highlight {
+	background: #1d1d1d;
+	color: #ffffff;
+	border-radius: 6px;
+	padding: 0.5em;
+	overflow-x: auto;
+	margin: 1em 0;
+	font-size: 1.1em;
+}
+
+#language-plaintext {
+	background: #1d1d1d;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+.highlight .k { color: #c678dd; }	    /* keyword */
+.highlight .s, .s1, .s2, .se { color: #98c379; }	  /* string */
+.highlight .c, .c1 { color: #7d8799; font-style: italic; }	/* comment */
+.highlight .nf, .n, .nc { color: #cd646c; }					/* function name */
+.highlight .o, .ow { color: #56b6c2; } /* operator */
+.highlight .nb { color: #cd646c; }		/* builtins */
+.highlight .mi { color: #d9b676; }		/* numbers */
+.highlight .nn { color: #cd646c; }		/* class/module */
+.highlight .bp { color: #d19a66; }
