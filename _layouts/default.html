@@ -69,7 +69,13 @@
       padding: 0.5em;
       overflow-x: auto;
       margin: 1em 0;
+    }
+    code {
       font-size: 1.1em;
+    }
+    pre, code {
+      white-space: pre-wrap !important;
+      word-wrap: break-word;
     }
     #language-plaintext {
       background: #1d1d1d;
@@ -91,7 +97,7 @@
 </head>
 <body>
     <header>
-    <span style="text-align: center;"><big>bananenbaumcpge.be</big><br>(oui tkt c'est le vrai nom de domaine)</span>
+    <span style="text-align: center;"><big><a href="https://bananachu.github.io" style="color: #121212;">bananenbaumcpge.be</a></big><br>(oui tkt c'est le vrai nom de domaine)</span>
       <table style="width: 800px; border-radius: 10px; background: #9e2a2b; border: 0px solid #1ec24d; margin-left: auto; margin-right: auto; color:#121212;">
         <tr>
         <th><a href="https://bananachu.github.io/info/intro.html">Inroduction</a></th>
@@ -102,7 +108,15 @@
         </tr>
       </table>
   </header>
+  <main>
     {{ content }}
-  <footer>texte en bas de page pour tout le monde (un jour viendra ou quelque chose d'interessant trouvera sa place ici)</footer>
+  </main>
+  <footer>
+    <tab>
+      <tr>
+        texte en bas de page pour tout le monde (un jour viendra ou quelque chose d'interessant trouvera sa place ici)
+      </tr>
+    </tab>
+  </footer>
 </body>
 </html>
