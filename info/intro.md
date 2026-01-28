@@ -6,6 +6,7 @@ Le programmeur Python verra la situation comme suit :
 2. mettre pâte dans moule
 3. cuire
 4. renvoyer le gâteau
+
 Son collègue amateur de OCaml pensera plutôt de cette manière :
 `gâteau = cuire(pâte)` où `pâte = mélange(ingrédients)`
 Le professeur d'option informatique de ce collègue, non-moins fou et ne redoutant pas le diabète provoqué par abus de sucre syntaxique pourrait même penser :
@@ -31,7 +32,8 @@ let x = 42;; (* On écrase le "vieux" x *)
 var x = 8;
 x = 42;
 ```
->(J'ai choisi le JavaScript puisque c'est éventuellement le seul autre langage qui est abordé dans une scolarité ante-MPSI mais ça aurait aussi été valable en C).
+> (J'ai choisi le JavaScript puisque c'est éventuellement le seul autre langage qui est abordé dans une scolarité ante-MPSI mais ça aurait aussi été valable en C).
+
 Voyez bien qu'ici le mot clef `var` n'est pas répété puisqu'on modifie vraiment la variable tandis qu'en OCaml on en définit une autre avec le même nom et on perd l'accès à la précédente. 
 
 La persistance des variables implique aussi que l'interpréteur OCaml ne changera pas de lui même un type de variable comme Python par exemple. Chaque type a ses propres opérateurs dont la syntaxe est distincte et les opérations mixtes ne sont pas possibles *a priori*, typiquement :
@@ -60,6 +62,7 @@ val p : int = 3
 val q : int = 1
 ```
 > Il n'y a pas d'opérateur puissance pour les `int`, mais il en existe un pour les `float`.
+
 ### Les flottants `float`
 Encore une fois on retrouve les propriétés habituelles des nombres à décimaux. Bien qu'étant eux aussi des nombres, les opérateurs des `float` sont bien distincts de ceux des `int`. Aussi, bien que leur partie décimale puisse être nulle, un flottant OCaml **doit** comporter un point : `2.` est un `float` mais `2` est un `int`. Les opérateurs aussi se voient affublés d'un `.` :
 ```ocaml
@@ -75,6 +78,7 @@ val a : float = 2.5
 # let y = 2. ** 7.2;;  (* exposant décimal *)
 val y : float = 147.033389439620493
 ```
+
 ### Les booléens `bool`
 Rien de nouveau sous le Soleil pour les booléens. La syntaxe est proche de celle du C, et les mot-clefs `true` et `false` s'écrivent sans majuscule :
 ```ocaml
@@ -91,6 +95,7 @@ val b : bool = true
 # let c = t && f;;
 val c : bool = false
 ```
+
 > L'opérateur `||` (resp. `&&`) est paresseux : si l'expression de gauche est évaluée `true` (resp. `false`) alors l'expression de droite ne sera pas évaluée et le tout renverra `true` (resp. `false`).
 
 > Ne surtout pas _pythonner_ à coup de `and` au lieu de `&&` ! L'opérateur `and` existe bel et bien en OCaml mais ne sert pas à l'algèbre booléenne, nous y reviendrons plus tard (c'est encore une fois du sucre syntaxique...). Dans la même veine, les anciennes versions d'OCaml permettaient la syntaxe `or` pour `||` mais ce n'est plus le cas depuis OCaml 5.1.
