@@ -5,15 +5,15 @@
 ### Les types de base
 Un type d'objet en C détermine l'**espace mémoire occupé par l'objet**, la **manière de représenter cet objet en binaire** et les **opérations possibles sur cet objet**. Nous reparlerons plus bas des différents opérateurs.
 
-| Préfixe                         | Taille en octets | Encodage         | Spécificateur "par défaut" |
-| :------------------------------ | :--------------- | :--------------- | :------------------------- |
-| `char`                          | 1                | entier non signé | `%c`                       |
-| `int`<br>`short`<br>`short int` | 2                | entier signé     | `%d` ou `%i`               |
-| `long int`<br>`long`            | 4                | entier signé     | `%ld` ou `%li`             |
-| `long long int`<br>`long long`  | 8                | entier signé     | `%lld` ou `%lli`           |
-| `float`                         | 4                | flottant         | `%f`                       |
-| `double`                        | 8                | flottant         | `%lf`                      |
-| `long double`                   | 16               | flottant         | `%Lf`                      |
+| Préfixe | Taille en octets | Encodage | Spécificateur "par défaut" |
+|:------|:------|:------| :------ |
+| `char` | 1                | entier non signé | `%c` |
+| `int`<br>`short`<br>`short int` | 2 | entier signé | `%d` ou `%i` |
+| `long int`<br>`long` | 4 | entier signé | `%ld` ou `%li` |
+| `long long int`<br>`long long` | 8 | entier signé | `%lld` ou `%lli` |
+| `float` | 4 | flottant | `%f` |
+| `double` | 8 | flottant | `%lf` |
+| `long double` | 16 | flottant | `%Lf` |
 Pour tout les types il est possible de rajouter les préfixes `unsigned` ou `signed` pour changer leur aspect signé. Le spécificateur pour tout `unsigned` est `%u` (ou `%lu`, ou `%llu`, ou `%Lu` avec la même logique que précédemment.)
 
 ### Typecasting et spécificateurs
@@ -48,13 +48,13 @@ printf("%u", n);  // Qu'affichera-t-on ?
 
 Outre les spécificateurs usuels il peut être intéressant de savoir qu'il en existe d'autres, très spécifiques et rares d'utilisation :
 
-| Syntaxe      | Usage                                                                                                                                                                                                                                    |
-| :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `%e` ou `%E` | Pour représenter un flottant en notation scientifique (avec `e` ou `E` à la place de "10^")                                                                                                                                              |
-| `%o`         | Convertit l'entrée pour en donner une représentation en base 8.                                                                                                                                                                          |
-| `%x` ou `%X` | Convertit l'entrée pour en donner une représentation en base 16.                                                                                                                                                                         |
-| `%%`         | Affiche le caractère `%` ou attend ce caractère dans l'entrée.                                                                                                                                                                           |
-| `%n`         | Compte le nombre de caractère affichée ou entrés. Au lieu de lire le contenu d'une variable il va affecter la valeur à une variable, si tant est qu'on lui attribue un pointeur vers un entier. Essayer le code suivant pour comprendre. |
+| Syntaxe | Usage |
+|:------|:------|
+| `%e` ou `%E` | Pour représenter un flottant en notation scientifique (avec `e` ou `E` à la place de "10^") |
+| `%o` | Convertit l'entrée pour en donner une représentation en base 8. |
+| `%x` ou `%X` | Convertit l'entrée pour en donner une représentation en base 16. |
+| `%%` | Affiche le caractère `%` ou attend ce caractère dans l'entrée. |
+| `%n` | Compte le nombre de caractère affichée ou entrés. Au lieu de lire le contenu d'une variable il va affecter la valeur à une variable, si tant est qu'on lui attribue un pointeur vers un entier. Essayer le code suivant pour comprendre. |
 Pour comprendre ce que fait `%n` on peut expérimenter ceci (laissé au lecteur) :
 ```c
 int a;
@@ -71,9 +71,9 @@ Il faut bien voir ici que le pointeur n'est pas du type  `int` mais bien `int *
 Lorsqu'on manipule des pointeurs on est amenés à utiliser plusieurs syntaxes, il faut bien savoir ce que chacune d'elle fait.
 
 | Syntaxe | Ce qu'on obtient                                                                                                                                                                                                                                                                               |
-| :------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `p`     | L'adresse mémoire enregistrée dans `p`.                                                                                                                                                                                                                                                        |
-| `*p`    | Le contenu qui se trouve à l'adresse stockée dans p.                                                                                                                                                                                                                                           |
+|:------|:------|
+| `p`     | L'adresse mémoire enregistrée dans `p`. |
+| `*p`    | Le contenu qui se trouve à l'adresse stockée dans p. |
 | `&p`    | L'adresse mémoire de `p` QUI N'EST PAS l'adresse stockée dans `p`. Nous verrons cela dans le paragraphe "opérateurs" mais `&variable` renvoie l'adresse d'une variable sous forme de pointeur, ainsi dans notre exemple `&p` est un pointeur vers un pointeurs vers un entier (type `int **`). |
 > La suite de cette partie viendra plus tard.
 
