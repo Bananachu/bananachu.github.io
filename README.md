@@ -3,7 +3,12 @@ layout: default
 title: Ma page
 ---
 
-# Resources pour puants de prépa
+# Resources pour puants de prépa et puants de l'ENSI !
+
+## Informatique et langage C (GPSE) :
+Bon pour l'instant c'est encore en travaux mais il y a de l'idée...
+* [Un résumé de cours.](c/cours.md)
+
 
 ## Français 25/26 ~ Expériences de la nature
 Écoutez j'ai pris toutes ces notes j'espère bien qu'elles me seront utiles (ce n'est pas fini).
@@ -19,6 +24,8 @@ Cours de OCaml niveau option informatique MPSI/MP. Il s'agit de mes propres note
 * [Créer des types en OCaml.](info/types.md)
 * [Les tableaux en OCaml.](info/tableaux.md)
 * [Les références en OCaml.](info/references.md)
+
+
 
 
 test de rendu latex $ax + b$ ou bien \(e^{i\pi} + 1 = 0\)
